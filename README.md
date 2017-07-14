@@ -1,9 +1,9 @@
 #study css class
 
-● 박스모델
-● inline요소, block요소
-● float과 clear: both(left, right)
-● position과 z-index
+1. 박스모델
+2. inline요소, block요소
+3. float과 clear: both(left, right)
+4.position과 z-index
 
 
 
@@ -22,13 +22,22 @@ div {
 }
 margin은 요소 간의 간격으로 마진끼리는 서로 겹쳐져서 둘 중 큰 간격만큼 벌어집니다. 예를 들어 다음의 소스를 보세요.
 
-<pre> 
+```html
 <div style="margin-bottom:10px;">Box 1</div>
 <div style="margin-top:30px;">Box 2</div>
-</pre>
+
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
 
 
 ![boxmodel](./img/boxmodel.png)
+![marginpadding](./img/marginpadding.png)
 
 
 
