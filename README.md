@@ -88,10 +88,10 @@ border 속성과 마찬가지로 방향에 따라 속성을 줄 수 있으며, �
 
 대표적인 인라인 요소는 아래와 같습니다:
 
-⋅⋅*a 요소
-⋅⋅*strong 요소
-⋅⋅*em 요소
-⋅⋅*span 요소
+* a 요소
+* strong 요소
+* em 요소
+* span 요소
 
 인라인 요소는 아래와 같이 블럭 요소(p 등) 안에 담겨야 하며, 여러 인라인 요소가 서로 중첩될 수 있습니다:
 
@@ -102,3 +102,18 @@ border 속성과 마찬가지로 방향에 따라 속성을 줄 수 있으며, �
 ```
 
 위 예시에서 p는 블럭 요소이고, a, strong은 인라인 요소입니다.
+
+
+## 인라인요소와 블락요소의 스타일 적용의 특징
+
+> 인라인 요소는 크기는 기본적으로 내부 content의 영역만큼 차지합니다. width, height를 강제로 주입해도 바뀌지 않습니다.
+
+```html
+<span style="width:100px;height:100px;">영역의 크기가 바뀌지 않습니다.</span>
+
+<span style="margin-top:100px;padding-top:100px;">마진과 패딩이 먹히질 않습니다.</span>
+
+<span style="margin-left:100px;padding-right:100px;">마진과 패딩이 작동합니다.</span>
+```
+
+인라인 요소의 특징중에 기억해야 할점은 margin top, bottom padding top, bottom은 작동하질 않지만 margin left, right 그리고 padding left, right는 작동한다는 사실입니다.
