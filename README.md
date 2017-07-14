@@ -1,5 +1,12 @@
 #study css class
 
+● 박스모델
+● inline요소, block요소
+● float과 clear: both(left, right)
+● position과 z-index
+
+
+
 
 #1.박스모델
 ## 마진과 패딩의 구별
@@ -14,8 +21,19 @@ div {
   margin : 10px 0 0 30px;
 }
 margin은 요소 간의 간격으로 마진끼리는 서로 겹쳐져서 둘 중 큰 간격만큼 벌어집니다. 예를 들어 다음의 소스를 보세요.
- <div style="margin-bottom:10px;">Box 1</div>
+
+<pre> 
+<div style="margin-bottom:10px;">Box 1</div>
 <div style="margin-top:30px;">Box 2</div>
+</pre>
 
 
 ![boxmodel](./img/boxmodel.png)
+
+
+
+
+
+
+
+<hr/>
