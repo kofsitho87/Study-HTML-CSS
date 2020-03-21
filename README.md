@@ -1,5 +1,5 @@
 # HMTL 기초
 
 
-# CSS 기초
-[링크에 사용할 이름](URL)
+# CSS
+[CSS 기초](https://github.com/kofsitho87/study-css-class/blob/master/css01.md)
