@@ -1,6 +1,4 @@
 .my-slider {
-  overflow: hidden;
-  height:300px;
   position: relative;
 }
 .my-slider .prev-btn {
@@ -57,4 +55,23 @@
   width: 100%;
   height: 100%;
   height:calc(100% / 4);
+}
+
+.my-slider .dot-container{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.my-slider .dot-container .dot{
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  margin: 0 10px;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.my-slider .dot-container .dot.active{
+  opacity: 1;
 }

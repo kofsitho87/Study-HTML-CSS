@@ -11,14 +11,22 @@
 
 <body>
   <div id="app"></div>
+  <div style="height:100px"></div>
+  <div id="app2"></div>
 </body>
 <script src="./index.js"></script>
 <script>
   new slideShow({
     el: document.getElementById("app"),
-    delay: 2000,
     speed: 300,
     items: ["1", "2", "3", 4],
+  });
+
+  new slideShow({
+    el: document.getElementById("app2"),
+    speed: 1000,
+    items: ["1", "2", "3", 4],
+    useDots: true,
   });
 </script>
 
