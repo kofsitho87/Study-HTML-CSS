@@ -14,6 +14,7 @@
       speed: 500,
       autoPlay: false,
       useDots: false,
+      duration: 500,
     }
     this.options = Object.assign(defaultOpts, options);
     this.init();
@@ -23,7 +24,6 @@
     init: function () {
       var { el, autoPlay } = this.options;
 
-      //
       this.isAciveBtns = true;
 
 
@@ -137,14 +137,16 @@
       }
     },
     play: function () {
-      var { container, boxSize, sliderIndex, items, speed } = this.options;
+      var { duration, speed } = this.options;
+      this.timer = setInterval(function () {
+        this.moveRight();
+      }.bind(this), speed + duration)
+    },
+    stop: function () {
+      clearInterval(this.timer);
+      this.timer = null;
     },
     moveTo: function (toIdx) {
-      // if (!this.isAciveBtns) {
-      //   return;
-      // }
-      // this.isAciveBtns = false;
-
       var { container, boxSize, sliderIndex, items, speed } = this.options;
       container.style['transition'] = `transform ease ${speed}ms`;
 

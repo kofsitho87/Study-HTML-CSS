@@ -13,6 +13,7 @@
   <div id="app"></div>
   <div style="height:100px"></div>
   <div id="app2"></div>
+  <button id="togglePlayer">toggle play</button>
 </body>
 <script src="./index.js"></script>
 <script>
@@ -20,14 +21,26 @@
     el: document.getElementById("app"),
     speed: 300,
     items: ["1", "2", "3", 4],
+    // autoPlay: true,
   });
 
-  new slideShow({
+  var slider2 = new slideShow({
     el: document.getElementById("app2"),
     speed: 1000,
     items: ["1", "2", "3", 4],
     useDots: true,
+    autoPlay: true,
+    duration: 1000,
   });
+  var isStop = false;
+  document.getElementById("togglePlayer").addEventListener("click", function () {
+    if (isStop) {
+      slider2.play();
+    } else {
+      slider2.stop();
+    }
+    isStop = !isStop;
+  })
 </script>
 
 </html>
